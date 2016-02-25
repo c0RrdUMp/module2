@@ -1,34 +1,80 @@
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-html
-
-/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
-@media only screen and (min-width: 480px) and (max-width: 767px) { }
-
-/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
-@media only screen and (max-width: 479px) { }
-
-
-/* POSITIONING START*/
+/********** Base styles **********/
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-h1 {
-  margin-bottom: 15px;
+
+body{
+  font-size: 100%;
+  font-family: Helvetica;
 }
 
-div#container {
-  background-color: #00FFFF;
-  position: relative;
-  top: 60px;
+#ptext {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 175%;
+  font-weight: bold;
+  
 }
+
 p {
-  border: 1px solid black;
-  margin-bottom: 15px;
+  width: 95%;
+  height: 150px;
+  color: black;
+  text-align: justify;
+  margin-left: 5px;
 }
 
-/* POSITIONING END */
+#p1{
+  border: 1px solid blue;
+  width: 100px;
+  height: auto;
+  text-align: center;
+  background-color: #FF00FF;
+  position: absolute;
+  top: -1px;
+  right: 0;
+  font-size: 125%;
+
+}
+
+div{
+  width: 100%;
+  padding-top: 40px;
+  position: relative;
+  border: 1px solid black;
+  background-color: #00FFFF;
+  margin-bottom: 10px;
+  margin-right: 2px;
+  margin-left: 2px;
+  float: left;
+
+}
+/* Simple Responsive Framework. */
+
+
+/********** Large devices only **********/
+@media (min-width: 992px) {
+  .col-lg{
+    float: left;
+    width: 33%;
+  }
+  
+}
+
+/********** Medium devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+  .col-md-50, .col-md-100 {
+    float: left;
+  }
+ 
+  .col-md-50 {
+    width: 49%;
+  }
+  
+  .col-md-100 {
+    width: 98.5%;
+  }
+}
